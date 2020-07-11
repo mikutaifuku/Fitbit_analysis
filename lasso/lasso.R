@@ -1,7 +1,7 @@
 #
 #  date : 2018/03/02
 #  
-#  T.Fukui
+#  mikutaifuku
 #
 #  lasso.R
 #
