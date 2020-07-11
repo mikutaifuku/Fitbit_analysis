@@ -20,13 +20,10 @@ library("ggfortify")
 df <- read_csv(file="data/merge.csv",
                col_names=TRUE, locale = locale(encoding="CP932")) %>% 
   select(-Date, -totalSleepRecords, -day, -steps, -totalMinutesAsleep, -Tobacco)
-# > dim(df)
-# [1] 43     15
 
 # lasso ====
-# 「睡眠効率に影響を与える変数を探る」事が目的
-# 説明変数を選択するためにlassoを使用してみる
-# xは標準化及びmatrix化
+# 「睡眠効率に影響を与える変数を探る」
+# lassoを用いて睡眠効率に影響を与える変数を選択
 
 y <- unlist(select(df, efficiency))
 x <- scale(as.matrix(select(df, -efficiency)))
